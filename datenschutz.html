@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Datenschutzerklärung – Schwabinger Stifte Kindergarten München</title>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <style>
+        :root{--yellow:#D9B95C;--yellow-dark:#B8951A;--yellow-bg:#F7EFD0;--sage:#7DAB7C;--sage-dark:#456E44;--sage-bg:#E6F0E5;--teal:#4D93A3;--teal-dark:#2E6C7A;--cream:#FEFCF4;--warm:#C87840;--warm-bg:#F9EDE0;--text:#2C3440;--text-light:#637082;--text-muted:#96A3B0;--radius:18px;--shadow:0 4px 20px rgba(0,0,0,0.07);}
+        *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+        html{scroll-behavior:smooth;overflow-x:hidden;max-width:100%;}
+        body{font-family:'Inter',sans-serif;color:var(--text);background:var(--cream);overflow-x:hidden;max-width:100%;line-height:1.7;}
+        a{text-decoration:none;color:inherit;}
+        nav{position:sticky;top:0;z-index:1000;background:rgba(255,252,244,0.96);backdrop-filter:blur(14px);border-bottom:2.5px solid var(--yellow);padding:0 5%;}
+        .nav-inner{max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;height:72px;}
+        .nav-logo{display:flex;align-items:center;gap:12px;}
+        .nav-logo-mark { width: 44px; height: 30px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+        .nav-logo-mark img { width: 44px; height: auto; display: block; }
+        .nav-logo-text{font-family:'Nunito',sans-serif;font-size:1.1rem;font-weight:700;line-height:1.2;}
+        .nav-logo-text span{display:block;font-size:0.72rem;color:var(--text-light);font-weight:400;font-family:'Inter',sans-serif;}
+        .nav-links{display:flex;align-items:center;gap:2px;list-style:none;}
+        .nav-links a{padding:8px 13px;border-radius:8px;font-size:0.88rem;font-weight:500;color:var(--text);transition:all 0.2s;}
+        .nav-links a:hover{background:var(--yellow-bg);color:var(--yellow-dark);}
+        .nav-cta{background:var(--yellow)!important;color:#fff!important;font-weight:700!important;border-radius:22px!important;padding:9px 20px!important;}
+        .burger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:8px;}
+        .burger span{display:block;width:24px;height:2.5px;background:var(--text);border-radius:4px;transition:all 0.3s;}
+        .burger.open span:nth-child(1){transform:translateY(7px) rotate(45deg);}
+        .burger.open span:nth-child(2){opacity:0;transform:scaleX(0);}
+        .burger.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg);}
+        .mob-menu{display:none;position:fixed;top:72px;left:0;right:0;background:var(--cream);padding:16px 5% 24px;border-bottom:2px solid var(--yellow);z-index:999;flex-direction:column;gap:6px;}
+        .mob-menu.open{display:flex;}
+        .mob-menu a{padding:12px 16px;border-radius:12px;font-weight:500;font-size:1rem;}
+        .mob-menu .mob-cta{background:var(--yellow);font-weight:700;text-align:center;margin-top:6px;border-radius:30px;}
+
+        .page-hero{background:linear-gradient(135deg,var(--cream) 0%,#E8F5E9 100%);padding:52px 5% 40px;}
+        .page-hero h1{font-family:'Nunito',sans-serif;font-size:2.4rem;font-weight:700;margin-bottom:8px;}
+        .page-hero p{color:var(--text-light);font-size:1rem;}
+
+        .legal-content{max-width:760px;margin:0 auto;padding:60px 5%;}
+        .legal-content h2{font-family:'Nunito',sans-serif;font-size:1.3rem;font-weight:700;margin:36px 0 12px;color:var(--text);}
+        .legal-content h2:first-child{margin-top:0;}
+        .legal-content h3{font-size:1rem;font-weight:600;margin:20px 0 8px;}
+        .legal-content p{color:var(--text-light);font-size:0.93rem;line-height:1.8;margin-bottom:10px;}
+        .legal-content ul{margin:8px 0 12px 20px;color:var(--text-light);font-size:0.93rem;line-height:1.8;}
+        .legal-content a{color:var(--teal-dark);}
+        .legal-content a:hover{text-decoration:underline;}
+        .divider{border:none;border-top:1px solid #E2E8F0;margin:28px 0;}
+
+        footer { background: #1E1C14; color: rgba(255,255,255,0.60); padding: 22px 5% 16px; position: relative; overflow: hidden; }
+        .footer-inner { max-width: 1200px; margin: 0 auto; position: relative; z-index: 1; }
+        .footer-sun { position: absolute; bottom: -60px; left: -40px; width: 220px; height: auto; opacity: 0.55; pointer-events: none; z-index: 0; }
+        .footer-brand-row { display: flex; align-items: baseline; gap: 12px; flex-wrap: wrap; margin-bottom: 10px; }
+        .footer-brand { font-family: 'Nunito', sans-serif; font-size: 0.95rem; font-weight: 700; color: white; }
+        .footer-tagline { font-size: 0.78rem; opacity: 0.42; }
+        .footer-bar { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 6px 20px; padding-top: 10px; border-top: 1px solid rgba(255,255,255,0.1); font-size: 0.77rem; }
+        .footer-bar-left { display: flex; flex-wrap: wrap; gap: 4px 14px; }
+        .footer-bar-right { display: flex; gap: 14px; }
+        .footer-bar a { color: rgba(217,185,92,0.80); transition: color 0.2s; }
+        .footer-bar a:hover { color: #fff; }
+        .footer-partner-row { font-size: 0.73rem; opacity: 0.38; margin-top: 7px; }
+        .footer-partner-row a { color: rgba(255,255,255,0.5); }
+
+        @media(max-width:767px){nav{padding:0 4%;}.nav-links{display:none;}.burger{display:flex;}.legal-content{padding:40px 4%;}.footer-brand-row{flex-direction:column;gap:3px;margin-bottom:10px;}.footer-tagline{font-size:0.70rem;}.footer-bar{flex-direction:row;flex-wrap:wrap;align-items:center;gap:4px 14px;}.footer-bar-left{flex-direction:row;flex-wrap:wrap;gap:3px 10px;font-size:0.72rem;}.footer-bar-right{gap:12px;}.footer-partner-row{font-size:0.68rem;margin-top:8px;}.footer-sun{width:140px;opacity:0.38;bottom:-40px;left:-24px;}.nav-inner{height:60px;}.mob-menu{top:60px;padding:10px 4% 18px;}.mob-menu a{padding:12px 14px;font-size:0.94rem;}}
+
+        @media (max-width: 1024px) and (orientation: portrait) {
+            .nav-links { display: none; }
+            .burger    { display: flex; }
+        }
+
+        @media (max-width: 400px) {
+            .nav-logo-text  { font-size: 0.88rem; }
+            .nav-logo-text span { display: none; }
+        }
+    </style>
+</head>
+<body>
+
+<nav>
+    <div class="nav-inner">
+        <a href="index.html" class="nav-logo">
+            <div class="nav-logo-mark"><img src="logo-nav.svg" alt="Schwabinger Stifte"></div>
+            <div class="nav-logo-text">Schwabinger Stifte<span>Privatkindergarten München</span></div>
+        </a>
+        <ul class="nav-links">
+            <li><a href="index.html#ueber-uns">Auf einen Blick</a></li>
+            <li><a href="konzept.html">Konzept</a></li>
+            <li><a href="index.html#team">Team</a></li>
+            <li><a href="index.html#alltag">Alltag</a></li>
+            <li><a href="eltern.html">Für Eltern</a></li>
+            <li><a href="jobs.html">Jobs</a></li>
+            <li><a href="index.html#kontakt" class="nav-cta">Platz anfragen</a></li>
+        </ul>
+        <div class="burger" onclick="toggleMenu()"><span></span><span></span><span></span></div>
+    </div>
+</nav>
+<div class="mob-menu" id="mobMenu">
+    <a href="index.html" onclick="toggleMenu()">Startseite</a>
+    <a href="konzept.html">Konzept</a>
+    <a href="eltern.html">Für Eltern</a>
+    <a href="jobs.html">Jobs</a>
+</div>
+
+<div class="page-hero">
+    <h1>Datenschutzerklärung</h1>
+    <p>Informationen gemäß DSGVO (Datenschutz-Grundverordnung)</p>
+</div>
+
+<div class="legal-content">
+
+    <h2>1. Verantwortlicher</h2>
+    <p>
+        <strong>Die Schwabinger Stifte</strong><br>
+        Inhaberin: Heike Speitmann<br>
+        Tengstraße 6 · 80798 München<br>
+        Tel.: 089 – 272 32 69<br>
+        E-Mail: <a href="mailto:info@schwabinger-stifte.de">info@schwabinger-stifte.de</a>
+    </p>
+
+    <hr class="divider">
+
+    <h2>2. Erhebung und Speicherung personenbezogener Daten</h2>
+    <h3>Beim Besuch unserer Website</h3>
+    <p>Beim Aufrufen unserer Website werden durch den Browser automatisch Informationen an den Server unserer Website übermittelt. Diese Informationen werden temporär in einem sogenannten Logfile gespeichert. Folgende Informationen werden ohne Ihr Zutun erfasst und bis zur automatisierten Löschung gespeichert:</p>
+    <ul>
+        <li>IP-Adresse des anfragenden Rechners</li>
+        <li>Datum und Uhrzeit des Zugriffs</li>
+        <li>Name und URL der abgerufenen Datei</li>
+        <li>Website, von der aus der Zugriff erfolgt (Referrer-URL)</li>
+        <li>Verwendeter Browser und ggf. das Betriebssystem Ihres Rechners</li>
+    </ul>
+    <p>Die genannten Daten werden durch uns zu folgenden Zwecken verarbeitet: Gewährleistung eines reibungslosen Verbindungsaufbaus der Website sowie Auswertung der Systemsicherheit und -stabilität. Die Rechtsgrundlage für die Datenverarbeitung ist Art. 6 Abs. 1 S. 1 lit. f DSGVO.</p>
+
+    <h3>Bei Nutzung unseres Kontaktformulars</h3>
+    <p>Wenn Sie uns per Kontaktformular oder E-Mail kontaktieren, werden die von Ihnen mitgeteilten Daten (Ihre E-Mail-Adresse, Ihr Name und gegebenenfalls Ihre Telefonnummer) zur Bearbeitung Ihrer Anfrage gespeichert. Die Rechtsgrundlage für die Verarbeitung der Daten ist Art. 6 Abs. 1 S. 1 lit. b DSGVO (Verarbeitung zur Erfüllung eines Vertrags). Die von Ihnen an uns übermittelten Daten verbleiben bei uns, bis Sie uns zur Löschung auffordern oder der Zweck für die Datenspeicherung entfällt.</p>
+
+    <hr class="divider">
+
+    <h2>3. Weitergabe von Daten</h2>
+    <p>Eine Übermittlung Ihrer persönlichen Daten an Dritte zu anderen als den im Folgenden aufgeführten Zwecken findet nicht statt. Wir geben Ihre persönlichen Daten nur an Dritte weiter, wenn Sie Ihre ausdrückliche Einwilligung dazu erteilt haben oder die Weitergabe zur Erfüllung einer rechtlichen Verpflichtung erforderlich ist.</p>
+
+    <h2>4. Externe Dienste (Google Fonts)</h2>
+    <p>Diese Website nutzt Google Fonts zur Darstellung von Schriftarten. Anbieter ist Google LLC, 1600 Amphitheatre Parkway, Mountain View, CA 94043, USA. Beim Aufruf einer Seite lädt Ihr Browser die benötigten Fonts direkt von Google-Servern. Dabei wird Ihre IP-Adresse an Google übermittelt. Weitere Informationen: <a href="https://policies.google.com/privacy" target="_blank">policies.google.com/privacy</a></p>
+
+    <h2>5. Kontaktformular (Formspree)</h2>
+    <p>Das Kontaktformular auf unserer Website nutzt den Dienst Formspree (formspree.io). Wenn Sie das Formular absenden, werden Ihre Angaben an Server von Formspree übermittelt. Formspree ist ein US-amerikanischer Dienst. Die Verarbeitung erfolgt auf Grundlage von Art. 6 Abs. 1 lit. b DSGVO. Weitere Informationen finden Sie unter: <a href="https://formspree.io/legal/privacy-policy" target="_blank">formspree.io/legal/privacy-policy</a></p>
+
+    <hr class="divider">
+
+    <h2>6. Cookies</h2>
+    <p>Unsere Website verwendet keine Tracking-Cookies und keine Analyse-Tools. Es werden lediglich technisch notwendige Session-Informationen verwendet.</p>
+
+    <h2>7. Ihre Rechte als betroffene Person</h2>
+    <p>Sie haben das Recht:</p>
+    <ul>
+        <li>gemäß Art. 15 DSGVO Auskunft über Ihre von uns verarbeiteten personenbezogenen Daten zu verlangen</li>
+        <li>gemäß Art. 16 DSGVO unverzüglich die Berichtigung unrichtiger oder Vervollständigung Ihrer bei uns gespeicherten personenbezogenen Daten zu verlangen</li>
+        <li>gemäß Art. 17 DSGVO die Löschung Ihrer bei uns gespeicherten personenbezogenen Daten zu verlangen</li>
+        <li>gemäß Art. 18 DSGVO die Einschränkung der Verarbeitung Ihrer personenbezogenen Daten zu verlangen</li>
+        <li>gemäß Art. 20 DSGVO Ihre personenbezogenen Daten, die Sie uns bereitgestellt haben, in einem strukturierten, gängigen und maschinenlesebaren Format zu erhalten</li>
+        <li>gemäß Art. 7 Abs. 3 DSGVO Ihre einmal erteilte Einwilligung jederzeit gegenüber uns zu widerrufen</li>
+        <li>gemäß Art. 77 DSGVO sich bei einer Aufsichtsbehörde zu beschweren</li>
+    </ul>
+
+    <h2>8. Widerspruchsrecht</h2>
+    <p>Sofern Ihre personenbezogenen Daten auf Grundlage von berechtigten Interessen gemäß Art. 6 Abs. 1 S. 1 lit. f DSGVO verarbeitet werden, haben Sie das Recht, gemäß Art. 21 DSGVO Widerspruch gegen die Verarbeitung Ihrer personenbezogenen Daten einzulegen.</p>
+
+    <h2>9. Aktualität und Änderung dieser Datenschutzerklärung</h2>
+    <p>Diese Datenschutzerklärung ist aktuell gültig und hat den Stand: Januar 2025. Durch die Weiterentwicklung unserer Website oder aufgrund geänderter gesetzlicher bzw. behördlicher Vorgaben kann es notwendig werden, diese Datenschutzerklärung zu ändern.</p>
+
+    <hr class="divider">
+    <p style="font-size:0.85rem;"><a href="impressum.html">→ Zum Impressum</a> · <a href="index.html">→ Zurück zur Startseite</a></p>
+</div>
+
+<footer>
+    <img class="footer-sun" src="sonne.svg" alt="">
+    <div class="footer-inner">
+        <div class="footer-brand-row">
+            <span class="footer-brand">Schwabinger Stifte</span>
+            <span class="footer-tagline">Privatkindergarten Schwabing/Maxvorstadt · Gefördert durch Freistaat Bayern &amp; LHM–RBS</span>
+        </div>
+        <div class="footer-bar">
+            <div class="footer-bar-left">
+                <span>© 2026 Schwabinger Stifte · Inhaberin: Heike Speitmann</span>
+                <span>Tengstraße 6, 80798 München</span>
+                <a href="tel:08927232069">089 – 272 32 69</a>
+                <a href="mailto:info@schwabinger-stifte.de">info@schwabinger-stifte.de</a>
+            </div>
+            <div class="footer-bar-right">
+                <a href="impressum.html">Impressum</a>
+                <a href="datenschutz.html">Datenschutz</a>
+            </div>
+        </div>
+        <div class="footer-partner-row">
+            In Zusammenarbeit mit <a href="https://kukita.de" target="_blank" rel="noopener">Kukita Kinderkrippen</a>
+            &amp; <a href="https://www.sonnenland-kinderwerkstatt.de" target="_blank" rel="noopener">Kinderwerkstatt Sonnenland</a>
+        </div>
+        <div style="margin-top:6px;">
+            <span class="cookie-revoke" onclick="cookieRevoke ? cookieRevoke() : void(0)">Cookie-Einstellungen ändern</span>
+        </div>
+    </div>
+</footer>
+
+<script>function toggleMenu(){document.getElementById('mobMenu').classList.toggle('open');document.querySelector('.burger').classList.toggle('open');}</script>
+</body>
+</html>

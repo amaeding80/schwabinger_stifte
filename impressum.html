@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Impressum – Schwabinger Stifte Kindergarten München</title>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <style>
+        :root{--yellow:#D9B95C;--yellow-dark:#B8951A;--yellow-bg:#F7EFD0;--sage:#7DAB7C;--sage-dark:#456E44;--sage-bg:#E6F0E5;--teal:#4D93A3;--teal-dark:#2E6C7A;--cream:#FEFCF4;--warm:#C87840;--warm-bg:#F9EDE0;--text:#2C3440;--text-light:#637082;--text-muted:#96A3B0;--radius:18px;--shadow:0 4px 20px rgba(0,0,0,0.07);}
+        *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+        html{scroll-behavior:smooth;overflow-x:hidden;max-width:100%;}
+        body{font-family:'Inter',sans-serif;color:var(--text);background:var(--cream);overflow-x:hidden;max-width:100%;line-height:1.7;}
+        a{text-decoration:none;color:inherit;}
+        nav{position:sticky;top:0;z-index:1000;background:rgba(255,252,244,0.96);backdrop-filter:blur(14px);border-bottom:2.5px solid var(--yellow);padding:0 5%;}
+        .nav-inner{max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;height:72px;}
+        .nav-logo{display:flex;align-items:center;gap:12px;}
+        .nav-logo-mark { width: 44px; height: 30px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+        .nav-logo-mark img { width: 44px; height: auto; display: block; }
+        .nav-logo-text{font-family:'Nunito',sans-serif;font-size:1.1rem;font-weight:700;line-height:1.2;}
+        .nav-logo-text span{display:block;font-size:0.72rem;color:var(--text-light);font-weight:400;font-family:'Inter',sans-serif;}
+        .nav-links{display:flex;align-items:center;gap:2px;list-style:none;}
+        .nav-links a{padding:8px 13px;border-radius:8px;font-size:0.88rem;font-weight:500;color:var(--text);transition:all 0.2s;}
+        .nav-links a:hover{background:var(--yellow-bg);color:var(--yellow-dark);}
+        .nav-cta{background:var(--yellow)!important;color:#fff!important;font-weight:700!important;border-radius:22px!important;padding:9px 20px!important;}
+        .burger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:8px;}
+        .burger span{display:block;width:24px;height:2.5px;background:var(--text);border-radius:4px;transition:all 0.3s;}
+        .burger.open span:nth-child(1){transform:translateY(7px) rotate(45deg);}
+        .burger.open span:nth-child(2){opacity:0;transform:scaleX(0);}
+        .burger.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg);}
+        .mob-menu{display:none;position:fixed;top:72px;left:0;right:0;background:var(--cream);padding:16px 5% 24px;border-bottom:2px solid var(--yellow);z-index:999;flex-direction:column;gap:6px;}
+        .mob-menu.open{display:flex;}
+        .mob-menu a{padding:12px 16px;border-radius:12px;font-weight:500;font-size:1rem;}
+        .mob-menu .mob-cta{background:var(--yellow);font-weight:700;text-align:center;margin-top:6px;border-radius:30px;}
+
+        .page-hero{background:linear-gradient(135deg,var(--cream) 0%,#E8F5E9 100%);padding:52px 5% 40px;}
+        .page-hero h1{font-family:'Nunito',sans-serif;font-size:2.4rem;font-weight:700;margin-bottom:8px;}
+        .page-hero p{color:var(--text-light);font-size:1rem;}
+
+        .legal-content{max-width:760px;margin:0 auto;padding:60px 5%;}
+        .legal-content h2{font-family:'Nunito',sans-serif;font-size:1.4rem;font-weight:700;margin:36px 0 12px;color:var(--text);}
+        .legal-content h2:first-child{margin-top:0;}
+        .legal-content p{color:var(--text-light);font-size:0.95rem;line-height:1.8;margin-bottom:10px;}
+        .legal-content a{color:var(--teal-dark);}
+        .legal-content a:hover{text-decoration:underline;}
+        .divider{border:none;border-top:1px solid #E2E8F0;margin:28px 0;}
+
+        footer { background: #1E1C14; color: rgba(255,255,255,0.60); padding: 22px 5% 16px; position: relative; overflow: hidden; }
+        .footer-inner { max-width: 1200px; margin: 0 auto; position: relative; z-index: 1; }
+        .footer-sun { position: absolute; bottom: -60px; left: -40px; width: 220px; height: auto; opacity: 0.55; pointer-events: none; z-index: 0; }
+        .footer-brand-row { display: flex; align-items: baseline; gap: 12px; flex-wrap: wrap; margin-bottom: 10px; }
+        .footer-brand { font-family: 'Nunito', sans-serif; font-size: 0.95rem; font-weight: 700; color: white; }
+        .footer-tagline { font-size: 0.78rem; opacity: 0.42; }
+        .footer-bar { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 6px 20px; padding-top: 10px; border-top: 1px solid rgba(255,255,255,0.1); font-size: 0.77rem; }
+        .footer-bar-left { display: flex; flex-wrap: wrap; gap: 4px 14px; }
+        .footer-bar-right { display: flex; gap: 14px; }
+        .footer-bar a { color: rgba(217,185,92,0.80); transition: color 0.2s; }
+        .footer-bar a:hover { color: #fff; }
+        .footer-partner-row { font-size: 0.73rem; opacity: 0.38; margin-top: 7px; }
+        .footer-partner-row a { color: rgba(255,255,255,0.5); }
+
+        @media(max-width:767px){nav{padding:0 4%;}.nav-links{display:none;}.burger{display:flex;}.legal-content{padding:40px 4%;}.footer-brand-row{flex-direction:column;gap:3px;margin-bottom:10px;}.footer-tagline{font-size:0.70rem;}.footer-bar{flex-direction:row;flex-wrap:wrap;align-items:center;gap:4px 14px;}.footer-bar-left{flex-direction:row;flex-wrap:wrap;gap:3px 10px;font-size:0.72rem;}.footer-bar-right{gap:12px;}.footer-partner-row{font-size:0.68rem;margin-top:8px;}.footer-sun{width:140px;opacity:0.38;bottom:-40px;left:-24px;}.nav-inner{height:60px;}.mob-menu{top:60px;padding:10px 4% 18px;}.mob-menu a{padding:12px 14px;font-size:0.94rem;}}
+
+        @media (max-width: 1024px) and (orientation: portrait) {
+            .nav-links { display: none; }
+            .burger    { display: flex; }
+        }
+
+        @media (max-width: 400px) {
+            .nav-logo-text  { font-size: 0.88rem; }
+            .nav-logo-text span { display: none; }
+        }
+    </style>
+</head>
+<body>
+
+<nav>
+    <div class="nav-inner">
+        <a href="index.html" class="nav-logo">
+            <div class="nav-logo-mark"><img src="logo-nav.svg" alt="Schwabinger Stifte"></div>
+            <div class="nav-logo-text">Schwabinger Stifte<span>Privatkindergarten München</span></div>
+        </a>
+        <ul class="nav-links">
+            <li><a href="index.html#ueber-uns">Auf einen Blick</a></li>
+            <li><a href="konzept.html">Konzept</a></li>
+            <li><a href="index.html#team">Team</a></li>
+            <li><a href="index.html#alltag">Alltag</a></li>
+            <li><a href="eltern.html">Für Eltern</a></li>
+            <li><a href="jobs.html">Jobs</a></li>
+            <li><a href="index.html#kontakt" class="nav-cta">Platz anfragen</a></li>
+        </ul>
+        <div class="burger" onclick="toggleMenu()"><span></span><span></span><span></span></div>
+    </div>
+</nav>
+<div class="mob-menu" id="mobMenu">
+    <a href="index.html" onclick="toggleMenu()">Startseite</a>
+    <a href="konzept.html">Konzept</a>
+    <a href="eltern.html">Für Eltern</a>
+    <a href="jobs.html">Jobs</a>
+</div>
+
+<div class="page-hero">
+    <h1>Impressum</h1>
+    <p>Angaben gemäß § 5 TMG</p>
+</div>
+
+<div class="legal-content">
+    <h2>Angaben gemäß § 5 TMG</h2>
+    <p>
+        <strong>Die Schwabinger Stifte</strong><br>
+        Inhaberin: Heike Speitmann<br>
+        Tengstraße 6<br>
+        80798 München
+    </p>
+
+    <h2>Kontakt</h2>
+    <p>
+        Telefon: <a href="tel:+4989-2723269">089 – 272 32 69</a><br>
+        E-Mail: <a href="mailto:info@schwabinger-stifte.de">info@schwabinger-stifte.de</a>
+    </p>
+
+    <h2>Einrichtungsleitung</h2>
+    <p>Jessica Herold</p>
+
+    <h2>Verantwortlich für den Inhalt nach § 55 Abs. 2 RStV</h2>
+    <p>Heike Speitmann<br>Tengstraße 6<br>80798 München</p>
+
+    <hr class="divider">
+
+    <h2>Inhalt der Website</h2>
+    <p>Sämtliche Texte inkl. schriftliches Konzept wurden verfasst von: Heike Speitmann</p>
+
+    <h2>Haftungshinweis</h2>
+    <p>Trotz sorgfältiger inhaltlicher Kontrolle wird keine Haftung für die Inhalte externer Links übernommen. Für den Inhalt der verlinkten Seiten sind ausschließlich deren Betreiber verantwortlich.</p>
+
+    <h2>Urheberrecht</h2>
+    <p>Alle Rechte vorbehalten: Die Inhalte dieser Website, insbesondere Bilder, Grafiken und Texte sowie deren Anordnung unterliegen dem Schutz des Urheberrechts.</p>
+
+    <hr class="divider">
+
+    <h2>Freunde & Partner</h2>
+    <p>
+        <a href="https://www.kukita.de" target="_blank">Kukita Kinderkrippen & -gärten</a><br>
+        <a href="https://www.sonnenland-kinderwerkstatt.de" target="_blank">Kreative Kinderwerkstatt Sonnenland</a>
+    </p>
+
+    <hr class="divider">
+    <p style="font-size:0.85rem;"><a href="datenschutz.html">→ Zur Datenschutzerklärung</a></p>
+</div>
+
+<footer>
+    <img class="footer-sun" src="sonne.svg" alt="">
+    <div class="footer-inner">
+        <div class="footer-brand-row">
+            <span class="footer-brand">Schwabinger Stifte</span>
+            <span class="footer-tagline">Privatkindergarten Schwabing/Maxvorstadt · Gefördert durch Freistaat Bayern &amp; LHM–RBS</span>
+        </div>
+        <div class="footer-bar">
+            <div class="footer-bar-left">
+                <span>© 2026 Schwabinger Stifte · Inhaberin: Heike Speitmann</span>
+                <span>Tengstraße 6, 80798 München</span>
+                <a href="tel:08927232069">089 – 272 32 69</a>
+                <a href="mailto:info@schwabinger-stifte.de">info@schwabinger-stifte.de</a>
+            </div>
+            <div class="footer-bar-right">
+                <a href="impressum.html">Impressum</a>
+                <a href="datenschutz.html">Datenschutz</a>
+            </div>
+        </div>
+        <div class="footer-partner-row">
+            In Zusammenarbeit mit <a href="https://kukita.de" target="_blank" rel="noopener">Kukita Kinderkrippen</a>
+            &amp; <a href="https://www.sonnenland-kinderwerkstatt.de" target="_blank" rel="noopener">Kinderwerkstatt Sonnenland</a>
+        </div>
+        <div style="margin-top:6px;">
+            <span class="cookie-revoke" onclick="cookieRevoke ? cookieRevoke() : void(0)">Cookie-Einstellungen ändern</span>
+        </div>
+    </div>
+</footer>
+
+<script>function toggleMenu(){document.getElementById('mobMenu').classList.toggle('open');document.querySelector('.burger').classList.toggle('open');}</script>
+</body>
+</html>

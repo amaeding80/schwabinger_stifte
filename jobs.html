@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jobs & Stellenangebote – Schwabinger Stifte Kindergarten München</title>
+    <meta name="description" content="Arbeiten bei den Schwabinger Stiften – wir suchen leidenschaftliche Erzieherinnen und Erzieher für unseren Privatkindergarten in München Schwabing.">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <style>
+        :root{--yellow:#FCD577;--yellow-dark:#E8A820;--yellow-bg:#FFF8E1;--sage:#9BC49A;--sage-dark:#5D9456;--sage-bg:#F0F7EE;--teal:#5AABB8;--teal-dark:#3D8E9B;--cream:#FFFCF4;--orange:#F09552;--text:#2D3748;--text-light:#718096;--text-muted:#A0AEC0;--radius:20px;--shadow:0 4px 24px rgba(0,0,0,0.08);--shadow-lg:0 8px 32px rgba(0,0,0,0.14);}
+        *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+        html{scroll-behavior:smooth;overflow-x:hidden;max-width:100%;}
+        body{font-family:'Inter',sans-serif;color:var(--text);background:var(--cream);overflow-x:hidden;max-width:100%;line-height:1.7;}
+        img{max-width:100%;height:auto;display:block;}
+        a{text-decoration:none;color:inherit;}
+        nav{position:sticky;top:0;z-index:1000;background:rgba(255,252,244,0.96);backdrop-filter:blur(14px);border-bottom:2.5px solid var(--yellow);padding:0 5%;}
+        .nav-inner{max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;height:72px;}
+        .nav-logo{display:flex;align-items:center;gap:12px;}
+        .nav-logo-mark { width: 44px; height: 30px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+        .nav-logo-mark img { width: 44px; height: auto; display: block; }
+        .nav-logo-text{font-family:'Nunito',sans-serif;font-size:1.1rem;font-weight:700;line-height:1.2;}
+        .nav-logo-text span{display:block;font-size:0.72rem;color:var(--text-light);font-weight:400;font-family:'Inter',sans-serif;}
+        .nav-links{display:flex;align-items:center;gap:2px;list-style:none;}
+        .nav-links a{padding:8px 13px;border-radius:8px;font-size:0.88rem;font-weight:500;color:var(--text);transition:all 0.2s;}
+        .nav-links a:hover{background:var(--yellow-bg);color:var(--yellow-dark);}
+        .nav-links a.active{background:var(--orange);color:white;font-weight:600;}
+        .nav-cta{background:var(--yellow)!important;color:#fff!important;font-weight:700!important;border-radius:22px!important;padding:9px 20px!important;}
+        .burger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:8px;}
+        .burger span{display:block;width:24px;height:2.5px;background:var(--text);border-radius:4px;transition:all 0.3s;}
+        .burger.open span:nth-child(1){transform:translateY(7px) rotate(45deg);}
+        .burger.open span:nth-child(2){opacity:0;transform:scaleX(0);}
+        .burger.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg);}
+        .mob-menu{display:none;position:fixed;top:72px;left:0;right:0;background:var(--cream);padding:16px 5% 24px;border-bottom:2px solid var(--yellow);z-index:999;flex-direction:column;gap:6px;}
+        .mob-menu.open{display:flex;}
+        .mob-menu a{padding:12px 16px;border-radius:12px;font-weight:500;font-size:1rem;}
+        .mob-menu a:hover{background:var(--yellow-bg);}
+        .mob-menu .mob-cta{background:var(--yellow);font-weight:700;text-align:center;margin-top:6px;border-radius:30px;}
+
+        .page-hero{background:linear-gradient(135deg,#FFF3E0 0%,var(--yellow-bg) 100%);padding:64px 5% 52px;position:relative;overflow:hidden;}
+        .blob{position:absolute;top:-60px;right:-60px;width:300px;height:300px;background:radial-gradient(circle,rgba(240,149,82,0.25) 0%,transparent 70%);border-radius:50%;pointer-events:none;}
+        .page-hero-inner{max-width:820px;position:relative;z-index:1;}
+        .tag{display:inline-block;padding:5px 15px;border-radius:20px;font-size:0.78rem;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;margin-bottom:14px;}
+        .tag-orange{background:#FFF3E0;color:#D45F00;border:1.5px solid #F09552;}
+        .tag-sage{background:var(--sage-bg);color:var(--sage-dark);}
+        .tag-yellow{background:var(--yellow-bg);color:var(--yellow-dark);}
+        .page-hero h1{font-family:'Nunito',sans-serif;font-size:clamp(2rem,4.5vw,3.2rem);font-weight:700;line-height:1.2;color:var(--text);margin-bottom:16px;}
+        .page-hero p{font-size:1.08rem;color:var(--text-light);line-height:1.8;max-width:640px;}
+        .wave{display:block;width:100%;overflow:hidden;line-height:0;}
+        .wave svg{display:block;width:100%;}
+
+        .section{padding:72px 5%;}
+        .section-inner{max-width:1100px;margin:0 auto;}
+        .section h2{font-family:'Nunito',sans-serif;font-size:clamp(1.6rem,3vw,2.2rem);font-weight:700;line-height:1.25;margin-bottom:18px;}
+        .section p{color:var(--text-light);line-height:1.85;margin-bottom:14px;}
+
+        /* WHY US */
+        .why-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:8px;}
+        .why-card{background:white;border-radius:var(--radius);padding:28px 22px;box-shadow:var(--shadow);transition:all 0.25s;border:2px solid transparent;}
+        .why-card:hover{border-color:var(--orange);transform:translateY(-3px);}
+        .why-icon{width:52px;height:52px;border-radius:14px;display:flex;align-items:center;justify-content:center;font-size:24px;margin-bottom:14px;background:#FFF3E0;}
+        .why-card h3{font-family:'Nunito',sans-serif;font-size:1.05rem;font-weight:600;margin-bottom:8px;}
+        .why-card p{font-size:0.87rem;color:var(--text-light);line-height:1.65;margin:0;}
+
+        /* JOB CARD */
+        .job-card{background:white;border-radius:var(--radius);padding:32px;box-shadow:var(--shadow-lg);border:2px solid var(--orange);margin-bottom:22px;}
+        .job-header{display:flex;justify-content:space-between;align-items:flex-start;gap:16px;margin-bottom:16px;flex-wrap:wrap;}
+        .job-title{font-family:'Nunito',sans-serif;font-size:1.45rem;font-weight:700;}
+        .job-badges{display:flex;gap:8px;flex-wrap:wrap;}
+        .badge{padding:4px 12px;border-radius:20px;font-size:0.78rem;font-weight:600;}
+        .badge-orange{background:#FFF3E0;color:#D45F00;}
+        .badge-teal{background:#E0F7FA;color:var(--teal-dark);}
+        .badge-sage{background:var(--sage-bg);color:var(--sage-dark);}
+        .job-desc{color:var(--text-light);font-size:0.93rem;line-height:1.8;margin-bottom:16px;}
+        .job-list{list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:6px;}
+        .job-list li{font-size:0.88rem;color:var(--text);padding-left:18px;position:relative;}
+        .job-list li::before{content:'✓';position:absolute;left:0;color:var(--sage-dark);font-weight:700;}
+        .job-btn{display:inline-flex;align-items:center;gap:8px;background:var(--orange);color:white;padding:12px 24px;border-radius:30px;font-weight:700;font-size:0.93rem;margin-top:20px;transition:all 0.25s;}
+        .job-btn:hover{background:#D45F00;transform:translateY(-2px);}
+
+        /* OPEN APPLICATION */
+        .open-app{background:var(--sage-bg);border-radius:var(--radius);padding:36px;box-shadow:var(--shadow);border:2px dashed var(--sage);}
+        .open-app h3{font-family:'Nunito',sans-serif;font-size:1.35rem;font-weight:700;margin-bottom:10px;}
+        .open-app p{color:var(--text-light);font-size:0.93rem;line-height:1.8;margin-bottom:18px;}
+
+        .cta-section{background:linear-gradient(135deg,var(--yellow-bg) 0%,var(--sage-bg) 100%);padding:64px 5%;text-align:center;}
+        .cta-inner{max-width:640px;margin:0 auto;}
+        .cta-section h2{font-family:'Nunito',sans-serif;font-size:2rem;font-weight:700;margin-bottom:12px;}
+        .cta-section p{color:var(--text-light);margin-bottom:28px;font-size:1.02rem;line-height:1.8;}
+        .btn-primary{background:var(--yellow);color:var(--text);padding:14px 28px;border-radius:30px;font-weight:700;font-size:0.98rem;transition:all 0.25s;display:inline-flex;align-items:center;gap:8px;}
+        .btn-primary:hover{background:var(--yellow-dark);transform:translateY(-2px);}
+        .btn-secondary{background:transparent;color:var(--text);padding:14px 28px;border-radius:30px;font-weight:600;font-size:0.98rem;border:2.5px solid var(--sage);transition:all 0.25s;display:inline-flex;align-items:center;gap:8px;margin-left:12px;}
+        .btn-secondary:hover{background:var(--sage-bg);}
+
+        footer { background: #1E1C14; color: rgba(255,255,255,0.60); padding: 22px 5% 16px; position: relative; overflow: hidden; }
+        .footer-inner { max-width: 1200px; margin: 0 auto; position: relative; z-index: 1; }
+        .footer-sun { position: absolute; bottom: -60px; left: -40px; width: 220px; height: auto; opacity: 0.55; pointer-events: none; z-index: 0; }
+        .footer-brand-row { display: flex; align-items: baseline; gap: 12px; flex-wrap: wrap; margin-bottom: 10px; }
+        .footer-brand { font-family: 'Nunito', sans-serif; font-size: 0.95rem; font-weight: 700; color: white; }
+        .footer-tagline { font-size: 0.78rem; opacity: 0.42; }
+        .footer-bar { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 6px 20px; padding-top: 10px; border-top: 1px solid rgba(255,255,255,0.1); font-size: 0.77rem; }
+        .footer-bar-left { display: flex; flex-wrap: wrap; gap: 4px 14px; }
+        .footer-bar-right { display: flex; gap: 14px; }
+        .footer-bar a { color: rgba(217,185,92,0.80); transition: color 0.2s; }
+        .footer-bar a:hover { color: #fff; }
+        .footer-partner-row { font-size: 0.73rem; opacity: 0.38; margin-top: 7px; }
+        .footer-partner-row a { color: rgba(255,255,255,0.5); }
+
+        @media(max-width:1023px){.why-grid{grid-template-columns:repeat(2,1fr);}.job-list{grid-template-columns:1fr;}}
+        @media(max-width:1024px) and (orientation:portrait){.nav-links{display:none;}.burger{display:flex;}.why-grid{grid-template-columns:repeat(2,1fr);}}
+        @media(max-width:767px){nav{padding:0 4%;}.nav-links{display:none;}.burger{display:flex;}.page-hero{padding:44px 4% 36px;}.section{padding:48px 4%;}.why-grid{grid-template-columns:1fr;}.btn-secondary{margin-left:0;margin-top:10px;}.cta-inner .btn-primary,.cta-inner .btn-secondary{width:100%;justify-content:center;}.job-list{grid-template-columns:1fr;}.job-header{flex-direction:column;}.footer-brand-row{flex-direction:column;gap:3px;margin-bottom:10px;}.footer-tagline{font-size:0.70rem;}.footer-bar{flex-direction:row;flex-wrap:wrap;align-items:center;gap:4px 14px;}.footer-bar-left{flex-direction:row;flex-wrap:wrap;gap:3px 10px;font-size:0.72rem;}.footer-bar-right{gap:12px;}.footer-partner-row{font-size:0.68rem;margin-top:8px;}.footer-sun{width:140px;opacity:0.38;bottom:-40px;left:-24px;}.nav-inner{height:60px;}.mob-menu{top:60px;padding:10px 4% 18px;}.mob-menu a{padding:12px 14px;font-size:0.94rem;}}
+
+        @media (max-width: 400px) {
+            .nav-logo-text  { font-size: 0.88rem; }
+            .nav-logo-text span { display: none; }
+        }
+    </style>
+</head>
+<body>
+
+<nav>
+    <div class="nav-inner">
+        <a href="index.html" class="nav-logo">
+            <div class="nav-logo-mark"><img src="logo-nav.svg" alt="Schwabinger Stifte"></div>
+            <div class="nav-logo-text">Schwabinger Stifte<span>Privatkindergarten München</span></div>
+        </a>
+        <ul class="nav-links">
+            <li><a href="index.html#ueber-uns">Auf einen Blick</a></li>
+            <li><a href="konzept.html">Konzept</a></li>
+            <li><a href="index.html#team">Team</a></li>
+            <li><a href="index.html#alltag">Alltag</a></li>
+            <li><a href="eltern.html">Für Eltern</a></li>
+            <li><a href="jobs.html" class="active">Jobs</a></li>
+            <li><a href="index.html#kontakt" class="nav-cta">Platz anfragen</a></li>
+        </ul>
+        <div class="burger" onclick="toggleMenu()"><span></span><span></span><span></span></div>
+    </div>
+</nav>
+<div class="mob-menu" id="mobMenu">
+    <a href="index.html#ueber-uns" onclick="toggleMenu()">Auf einen Blick</a>
+    <a href="konzept.html">Konzept</a>
+    <a href="index.html#team" onclick="toggleMenu()">Team</a>
+    <a href="index.html#alltag" onclick="toggleMenu()">Alltag & Galerie</a>
+    <a href="eltern.html">Für Eltern</a>
+    <a href="jobs.html">Jobs</a>
+</div>
+
+<div class="page-hero">
+    <div class="blob"></div>
+    <div class="page-hero-inner">
+        <div class="tag tag-orange">Stellenangebote</div>
+        <h1>Wir suchen<br>Verstärkung.</h1>
+        <p>Sie sind leidenschaftlich, empathisch und möchten in einem kleinen, familiären Team arbeiten? Dann könnten Sie perfekt zu uns passen.</p>
+    </div>
+</div>
+<div class="wave" style="background:linear-gradient(135deg,#FFF3E0,var(--yellow-bg))">
+    <svg viewBox="0 0 1440 48" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+        <path d="M0,24 C360,48 1080,0 1440,24 L1440,48 L0,48 Z" fill="#fff"/>
+    </svg>
+</div>
+
+<!-- WARUM WIR -->
+<section class="section" style="background:#fff;">
+    <div class="section-inner">
+        <div class="tag tag-sage" style="margin-bottom:14px;">Warum Schwabinger Stifte?</div>
+        <h2>Ein Team, das füreinander da ist</h2>
+        <p>Wir sind ein kleines, buntgemischtes Team aus Voll- und Teilzeitkräften. Bei uns kennen sich alle – und das macht den Unterschied.</p>
+        <div class="why-grid">
+            <div class="why-card">
+                <div class="why-icon"></div>
+                <h3>Familiäres Umfeld</h3>
+                <p>25 Kinder in einer einzigen Gruppe – hier kennt jede:r jedes Kind beim Namen. Kein anonymer Kindergartenalltag.</p>
+            </div>
+            <div class="why-card">
+                <div class="why-icon"></div>
+                <h3>Pädagogischer Freiraum</h3>
+                <p>Wir arbeiten mit dem situativen Ansatz und Projektarbeit. Ihre Ideen sind willkommen und werden ernst genommen.</p>
+            </div>
+            <div class="why-card">
+                <div class="why-icon"></div>
+                <h3>Tolle Lage</h3>
+                <p>Tengstraße 6 in München Schwabing – gut erreichbar mit U-Bahn und Bus, mitten in einem lebendigen Stadtviertel.</p>
+            </div>
+            <div class="why-card">
+                <div class="why-icon"></div>
+                <h3>Echte Zusammenarbeit</h3>
+                <p>Regelmäßige Teambesprechungen, Elternarbeit auf Augenhöhe und ein offenes Miteinander – so arbeiten wir.</p>
+            </div>
+            <div class="why-card">
+                <div class="why-icon"></div>
+                <h3>Weiterentwicklung</h3>
+                <p>Wir unterstützen Fort- und Weiterbildungen und schätzen Menschen, die neugierig und lernbereit sind.</p>
+            </div>
+            <div class="why-card">
+                <div class="why-icon"></div>
+                <h3>Frisches Essen</h3>
+                <p>Täglich frisch gekochtes Mittagessen von unserer Köchin Mae – auch das Team profitiert davon.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<div class="wave" style="background:#fff">
+    <svg viewBox="0 0 1440 48" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+        <path d="M0,18 C480,48 960,0 1440,36 L1440,48 L0,48 Z" fill="var(--cream)"/>
+    </svg>
+</div>
+
+<!-- STELLENANGEBOTE -->
+<section class="section" style="background:var(--cream);">
+    <div class="section-inner" style="max-width:900px;">
+        <div class="tag tag-orange" style="margin-bottom:14px;">Offene Stellen</div>
+        <h2>Aktuelle Stellenangebote</h2>
+        <p>Wir freuen uns immer über qualifizierte Bewerbungen – auch wenn aktuell keine spezifische Stelle ausgeschrieben ist. Initiativbewerbungen sind herzlich willkommen.</p>
+
+        <div class="job-card" style="margin-top:28px;">
+            <div class="job-header">
+                <div class="job-title">Erzieher:in (m/w/d)</div>
+                <div class="job-badges">
+                    <span class="badge badge-orange">Vollzeit / Teilzeit</span>
+                    <span class="badge badge-teal">München Schwabing</span>
+                    <span class="badge badge-sage">Ab sofort / nach Vereinbarung</span>
+                </div>
+            </div>
+            <p class="job-desc">Wir suchen eine engagierte Erzieherin oder einen engagierten Erzieher mit Herz für unsere eingruppige Einrichtung. Sie arbeiten in einem kleinen, kollegialen Team und begleiten Kinder von 2,5 bis 6 Jahren in ihrem Alltag.</p>
+            <ul class="job-list">
+                <li>Staatlich anerkannte Ausbildung (Erzieher:in, Kindheitspädagog:in o.ä.)</li>
+                <li>Freude an situativer und projektorientierter Arbeit</li>
+                <li>Empathie und Geduld im Umgang mit Kindern und Eltern</li>
+                <li>Teamfähigkeit und Kommunikationsfreude</li>
+                <li>Zuverlässigkeit und Engagement</li>
+                <li>Bereitschaft zur Reflexion der eigenen Arbeit</li>
+            </ul>
+            <a href="mailto:info@schwabinger-stifte.de?subject=Bewerbung%20als%20Erzieher:in" class="job-btn">Jetzt bewerben</a>
+        </div>
+
+        <!-- Initiativbewerbung -->
+        <div class="open-app">
+            <h3>Keine passende Stelle dabei?</h3>
+            <p>Wir sind immer an tollen Menschen interessiert – auch wenn wir gerade keine offene Stelle haben. Schicken Sie uns einfach Ihre Initiativbewerbung mit einem kurzen Anschreiben und Ihrem Lebenslauf.</p>
+            <a href="mailto:info@schwabinger-stifte.de?subject=Initiativbewerbung%20Schwabinger%20Stifte" class="job-btn" style="background:var(--sage-dark);">Initiativbewerbung senden</a>
+        </div>
+    </div>
+</section>
+
+<div class="wave" style="background:var(--cream)">
+    <svg viewBox="0 0 1440 48" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+        <path d="M0,30 C360,0 1080,48 1440,18 L1440,48 L0,48 Z" fill="var(--yellow-bg)"/>
+    </svg>
+</div>
+
+<section class="cta-section">
+    <div class="cta-inner">
+        <h2>Fragen zur Stelle?</h2>
+        <p>Frau Herold oder Frau Speitmann freuen sich über Ihre Nachricht – gerne auch per Telefon unter 089 – 272 32 69.</p>
+        <a href="mailto:info@schwabinger-stifte.de" class="btn-primary">E-Mail schreiben</a>
+        <a href="index.html" class="btn-secondary">Zur Startseite</a>
+    </div>
+</section>
+
+<footer>
+    <img class="footer-sun" src="sonne.svg" alt="">
+    <div class="footer-inner">
+        <div class="footer-brand-row">
+            <span class="footer-brand">Schwabinger Stifte</span>
+            <span class="footer-tagline">Privatkindergarten Schwabing/Maxvorstadt · Gefördert durch Freistaat Bayern &amp; LHM–RBS</span>
+        </div>
+        <div class="footer-bar">
+            <div class="footer-bar-left">
+                <span>© 2026 Schwabinger Stifte · Inhaberin: Heike Speitmann</span>
+                <span>Tengstraße 6, 80798 München</span>
+                <a href="tel:08927232069">089 – 272 32 69</a>
+                <a href="mailto:info@schwabinger-stifte.de">info@schwabinger-stifte.de</a>
+            </div>
+            <div class="footer-bar-right">
+                <a href="impressum.html">Impressum</a>
+                <a href="datenschutz.html">Datenschutz</a>
+            </div>
+        </div>
+        <div class="footer-partner-row">
+            In Zusammenarbeit mit <a href="https://kukita.de" target="_blank" rel="noopener">Kukita Kinderkrippen</a>
+            &amp; <a href="https://www.sonnenland-kinderwerkstatt.de" target="_blank" rel="noopener">Kinderwerkstatt Sonnenland</a>
+        </div>
+        <div style="margin-top:6px;">
+            <span class="cookie-revoke" onclick="cookieRevoke ? cookieRevoke() : void(0)">Cookie-Einstellungen ändern</span>
+        </div>
+    </div>
+</footer>
+<script>function toggleMenu(){document.getElementById('mobMenu').classList.toggle('open');document.querySelector('.burger').classList.toggle('open');}</script>
+</body>
+</html>

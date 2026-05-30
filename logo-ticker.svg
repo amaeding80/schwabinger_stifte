@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 88 52" fill="none">
+  <!-- Blaues Kind links -->
+  <g fill="#4A7EC7">
+    <ellipse cx="14" cy="8" rx="6.5" ry="7"/>
+    <path d="M7,18 C7,16 10,15 14,15 C18,15 21,16 21,18 L22,38 C22,40 20,41 14,41 C8,41 6,40 6,38 Z"/>
+    <line x1="7" y1="22" x2="1" y2="32" stroke="#4A7EC7" stroke-width="4.5" stroke-linecap="round"/>
+    <line x1="21" y1="22" x2="26" y2="30" stroke="#4A7EC7" stroke-width="4" stroke-linecap="round"/>
+    <line x1="10" y1="40" x2="8" y2="51" stroke="#4A7EC7" stroke-width="4" stroke-linecap="round"/>
+    <line x1="18" y1="40" x2="20" y2="51" stroke="#4A7EC7" stroke-width="4" stroke-linecap="round"/>
+  </g>
+  <!-- Rotes Kind mitte -->
+  <g fill="#D94040">
+    <ellipse cx="44" cy="7" rx="7.5" ry="7.5"/>
+    <path d="M36,18 C36,16 39,15 44,15 C49,15 52,16 52,18 L53,40 C53,42 50,43 44,43 C38,43 35,42 35,40 Z"/>
+    <line x1="36" y1="20" x2="27" y2="16" stroke="#D94040" stroke-width="5" stroke-linecap="round"/>
+    <line x1="52" y1="20" x2="61" y2="16" stroke="#D94040" stroke-width="5" stroke-linecap="round"/>
+    <line x1="39" y1="42" x2="37" y2="51" stroke="#D94040" stroke-width="4.5" stroke-linecap="round"/>
+    <line x1="49" y1="42" x2="51" y2="51" stroke="#D94040" stroke-width="4.5" stroke-linecap="round"/>
+  </g>
+  <!-- Grünes Kind rechts -->
+  <g fill="#3DA65A">
+    <ellipse cx="74" cy="8" rx="6.5" ry="7"/>
+    <path d="M67,18 C67,16 70,15 74,15 C78,15 81,16 81,18 L82,38 C82,40 80,41 74,41 C68,41 66,40 66,38 Z"/>
+    <line x1="67" y1="22" x2="62" y2="30" stroke="#3DA65A" stroke-width="4" stroke-linecap="round"/>
+    <line x1="81" y1="22" x2="87" y2="32" stroke="#3DA65A" stroke-width="4.5" stroke-linecap="round"/>
+    <line x1="70" y1="40" x2="68" y2="51" stroke="#3DA65A" stroke-width="4" stroke-linecap="round"/>
+    <line x1="78" y1="40" x2="80" y2="51" stroke="#3DA65A" stroke-width="4" stroke-linecap="round"/>
+  </g>
+</svg>

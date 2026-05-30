@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 220" fill="none">
+  <!-- Hand-painted sun, Kita Schwabinger Stifte style -->
+
+  <!-- Rays — thick brushstroke paths, organic, imperfect -->
+  <!-- top -->
+  <path d="M103,88 C99,68 95,44 97,8 C101,40 106,66 108,88" fill="#D4780C" opacity="0.82"/>
+  <!-- top-right -->
+  <path d="M118,96 C131,78 148,56 170,34 C152,58 136,80 120,100" fill="#C86A08" opacity="0.78"/>
+  <!-- right -->
+  <path d="M122,110 C142,104 164,98 196,96 C167,102 146,108 122,116" fill="#D4780C" opacity="0.82"/>
+  <!-- bottom-right -->
+  <path d="M116,126 C128,140 142,158 160,178 C144,158 130,140 112,124" fill="#C86A08" opacity="0.78"/>
+  <!-- bottom -->
+  <path d="M103,130 C101,150 97,172 99,206 C104,174 108,152 108,130" fill="#D4780C" opacity="0.82"/>
+  <!-- bottom-left -->
+  <path d="M90,124 C74,138 56,154 34,172 C54,152 70,136 92,122" fill="#C86A08" opacity="0.78"/>
+  <!-- left -->
+  <path d="M84,110 C64,106 40,100 8,100 C38,104 62,108 84,114" fill="#D4780C" opacity="0.82"/>
+  <!-- top-left -->
+  <path d="M90,96 C74,80 54,60 32,38 C54,60 74,80 92,98" fill="#C86A08" opacity="0.78"/>
+
+  <!-- Sun body — layered organic circles for painted depth -->
+  <ellipse cx="107" cy="111" rx="42" ry="40" fill="#BE5E08" opacity="0.75"/>
+  <ellipse cx="105" cy="109" rx="38" ry="36" fill="#D4780C" opacity="0.88"/>
+  <ellipse cx="104" cy="108" rx="32" ry="30" fill="#E08818" opacity="0.90"/>
+  <!-- bright highlight — upper-left, like real paint -->
+  <ellipse cx="96" cy="100" rx="14" ry="11" fill="#EFA030" opacity="0.42"/>
+  <ellipse cx="92" cy="96" rx="6" ry="5" fill="#F8C050" opacity="0.28"/>
+</svg>
