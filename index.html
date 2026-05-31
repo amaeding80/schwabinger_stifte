@@ -545,6 +545,17 @@
             .form-row      { grid-template-columns: 1fr; gap: 10px; }
             /* Sections etwas kompakter */
             #ueber-uns, #team, #alltag, #tagesablauf, #kontakt { padding: 56px 5%; }
+
+            /* — COOKIE BANNER: Tablet-Hochformat scrollbar — */
+            #cookie-box {
+                max-height: 82vh;
+                overflow-y: auto;
+                -webkit-overflow-scrolling: touch;
+            }
+            .cookie-header { padding: 18px 0 10px; }
+            .cookie-svg    { width: 60px; height: 60px; }
+            .cookie-header h2 { font-size: 1.1rem; margin-top: 8px; }
+            .cookie-body   { padding: 14px 22px 0; }
         }
 
         /* ============================================
