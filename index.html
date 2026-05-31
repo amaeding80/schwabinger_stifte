@@ -721,26 +721,55 @@
 
         /* ============================================
            COOKIE BANNER – QUERFORMAT (Landscape)
-           Tablet & Phone im Querformat: Höhe begrenzt,
-           Banner muss scrollbar sein.
+           Tablet & Phone im Querformat: Höhe begrenzt.
+           Lösung: Kompakt-Modus ohne große Illustration,
+           Buttons nebeneinander → passt komplett ohne Scrollen rein.
+           Body-Scroll-Sperre via JS (.cookie-open Klasse).
            ============================================ */
+        body.cookie-open {
+            overflow: hidden;
+            position: fixed;
+            width: 100%;
+        }
+
         @media (orientation: landscape) and (max-height: 900px) {
+            /* Von unten einfahren wie auf Mobile */
             #cookie-overlay {
-                align-items: center;
-                padding: 12px 20px;
-                overflow-y: auto; /* Overlay scrollbar als Fallback */
+                align-items: flex-end;
+                padding: 0;
             }
             #cookie-box {
-                max-height: 88vh;
+                max-width: 100%;
+                border-radius: 20px 20px 0 0;
+                max-height: 95vh;
                 overflow-y: auto;
                 -webkit-overflow-scrolling: touch;
+                display: flex;
+                flex-direction: column;
             }
-            .cookie-header { padding: 10px 0 6px; }
-            .cookie-svg    { width: 44px; height: 44px; }
-            .cookie-header h2 { font-size: 1rem; margin-top: 5px; }
-            .cookie-body   { padding: 10px 24px 0; }
-            .cookie-body > p { margin-bottom: 10px; font-size: 0.82rem; }
-            .cookie-cat    { padding: 8px 12px; }
+            /* Illustration ausblenden — spart ~120px Höhe */
+            .cookie-header { display: none; }
+            /* Kompakter Body */
+            .cookie-body { padding: 14px 24px 4px; }
+            .cookie-body > p {
+                font-size: 0.80rem; line-height: 1.5; margin-bottom: 8px;
+            }
+            /* Kategorien kompakter */
+            .cookie-cat { padding: 7px 12px; gap: 10px; margin-bottom: 6px; }
+            .cookie-cat-info strong { font-size: 0.83rem; }
+            .cookie-cat-info span   { font-size: 0.74rem; }
+            /* Buttons nebeneinander in einer Zeile */
+            .cookie-btns {
+                flex-direction: row;
+                padding: 8px 24px 0;
+                gap: 8px;
+            }
+            .cookie-btn-accept,
+            .cookie-btn-save { flex: 1; padding: 10px 8px; font-size: 0.84rem; }
+            /* Ablehnen-Button als schmaler Link darunter */
+            .cookie-reject-wrap { padding: 5px 24px 2px; text-align: center; }
+            .cookie-btn-reject  { font-size: 0.78rem; padding: 4px 12px; }
+            .cookie-legal { margin: 6px 24px 0; font-size: 0.68rem; }
         }
     </style>
 </head>
@@ -1307,10 +1336,12 @@ setInterval(updateStatusBadge, 30000);
     let bannerShownAt = 0;
     function showBanner() {
         document.getElementById('cookie-overlay').classList.add('visible');
+        document.body.classList.add('cookie-open'); /* Seiten-Scroll sperren */
         bannerShownAt = Date.now();
     }
     function hideBanner() {
         document.getElementById('cookie-overlay').classList.remove('visible');
+        document.body.classList.remove('cookie-open'); /* Seiten-Scroll freigeben */
         // Show revoke link in footer
         const rl = document.querySelector('.cookie-revoke');
         if (rl) rl.style.display = 'inline';
