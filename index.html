@@ -318,6 +318,8 @@
         .alltag-info p { font-size: 0.84rem; color: var(--text-light); line-height: 1.6; }
 
         /* === ALLTAG: Organische Bildformen === */
+        /* 5. Bild: Gesichter nicht abschneiden */
+        .alltag-card:nth-child(5) .alltag-photo img { object-position: 55% 0%; }
         .alltag-card:nth-child(odd)  .alltag-photo { border-radius: 40px 10px 40px 10px; }
         .alltag-card:nth-child(even) .alltag-photo { border-radius: 10px 40px 10px 40px; }
         /* Mehr Luft zwischen Bild und Text */
@@ -1267,8 +1269,10 @@ setInterval(updateStatusBadge, 30000);
 (function() {
     const CONSENT_KEY = 'ss_cookie_consent';
 
+    let bannerShownAt = 0;
     function showBanner() {
         document.getElementById('cookie-overlay').classList.add('visible');
+        bannerShownAt = Date.now();
     }
     function hideBanner() {
         document.getElementById('cookie-overlay').classList.remove('visible');
@@ -1294,18 +1298,24 @@ setInterval(updateStatusBadge, 30000);
         // If you want to defer loading, swap the preconnect/stylesheet here
     }
 
+    function ghostClickGuard() {
+        return (Date.now() - bannerShownAt) < 600;
+    }
     window.cookieAcceptAll = function() {
+        if (ghostClickGuard()) return;
         document.getElementById('cat-comfort').checked = true;
         document.getElementById('cat-stats').checked = true;
         saveConsent(true, true);
     };
     window.cookieSaveSelection = function() {
+        if (ghostClickGuard()) return;
         saveConsent(
             document.getElementById('cat-comfort').checked,
             document.getElementById('cat-stats').checked
         );
     };
     window.cookieRejectAll = function() {
+        if (ghostClickGuard()) return;
         saveConsent(false, false);
     };
     window.cookieRevoke = function() {
@@ -1317,7 +1327,7 @@ setInterval(updateStatusBadge, 30000);
     const stored = localStorage.getItem(CONSENT_KEY);
     if (!stored) {
         // Show after short delay so page renders first
-        setTimeout(showBanner, 800);
+        requestAnimationFrame(function() { requestAnimationFrame(showBanner); });
     } else {
         const data = JSON.parse(stored);
         if (data.comfort) applyComfortConsent();
