@@ -718,6 +718,30 @@
             .zitat-card     { padding: 20px 16px; }
             .btn-wunsch     { font-size: 0.82rem; padding: 8px 16px; }
         }
+
+        /* ============================================
+           COOKIE BANNER – QUERFORMAT (Landscape)
+           Tablet & Phone im Querformat: Höhe begrenzt,
+           Banner muss scrollbar sein.
+           ============================================ */
+        @media (orientation: landscape) and (max-height: 900px) {
+            #cookie-overlay {
+                align-items: center;
+                padding: 12px 20px;
+                overflow-y: auto; /* Overlay scrollbar als Fallback */
+            }
+            #cookie-box {
+                max-height: 88vh;
+                overflow-y: auto;
+                -webkit-overflow-scrolling: touch;
+            }
+            .cookie-header { padding: 10px 0 6px; }
+            .cookie-svg    { width: 44px; height: 44px; }
+            .cookie-header h2 { font-size: 1rem; margin-top: 5px; }
+            .cookie-body   { padding: 10px 24px 0; }
+            .cookie-body > p { margin-bottom: 10px; font-size: 0.82rem; }
+            .cookie-cat    { padding: 8px 12px; }
+        }
     </style>
 </head>
 <body>
