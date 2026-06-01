@@ -381,6 +381,41 @@
         .footer-partner-row { font-size: 0.73rem; opacity: 0.38; margin-top: 7px; }
         .footer-partner-row a { color: rgba(255,255,255,0.5); }
 
+        /* === HANDABDRUCK-AKZENTE === */
+        .hero-hand {
+            position: absolute;
+            top: 8%;
+            right: 5%;
+            width: 140px;
+            height: auto;
+            opacity: 0.22;
+            mix-blend-mode: multiply;
+            transform: rotate(15deg);
+            pointer-events: none;
+            z-index: 3;
+        }
+        .footer-hand {
+            position: absolute;
+            bottom: 12px;
+            right: 16px;
+            width: 60px;
+            height: auto;
+            opacity: 0.30;
+            transform: rotate(-10deg);
+            pointer-events: none;
+        }
+        @media (max-width: 1023px) {
+            .hero-hand  { width: 110px; top: 8%; right: 5%; }
+        }
+        @media (max-width: 767px) {
+            .hero-hand  { width: 75px; top: 10%; right: 3%; }
+            .footer-hand { width: 44px; bottom: 10px; right: 12px; }
+        }
+        @media (max-width: 400px) {
+            .hero-hand  { width: 60px; top: 8%; right: 2%; }
+            .footer-hand { width: 38px; bottom: 8px; right: 10px; }
+        }
+
         /* === WUNSCHBOX === */
         .wunschbox-wrap {
             background: #1E1C14; padding: 44px 5% 0;
@@ -855,6 +890,7 @@
             </div>
         </div>
     </div>
+
 </section>
 
 <!-- WAVE: Hero → Auf einen Blick -->
@@ -1130,6 +1166,8 @@
        href="mailto:info@schwabinger-stifte.de?subject=Wunschbox%20%E2%80%93%20Idee%20f%C3%BCr%20den%20Kita-Alltag&body=Hallo%20liebes%20Team%20der%20Schwabinger%20Stifte%2C%0A%0AMeine%20Idee%20%2F%20mein%20Wunsch%20f%C3%BCr%20unseren%20Kita-Alltag%3A%0A%0A...%0A%0AHerzliche%20Gr%C3%BC%C3%9Fe%2C">
       Zettel abschicken&nbsp;→
     </a>
+    <!-- Handabdruck als Signatur -->
+    <img src="hand.png" alt="" class="footer-hand">
   </div>
 </div>
 
